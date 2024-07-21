@@ -36,7 +36,6 @@ html {
 body {
   font-family: "Open Sans", sans-serif;
   overflow-x: hidden;
-  /* width: 100vw; */
 }
 
 ul {
@@ -309,6 +308,30 @@ header .container .nav > li > a:hover {
   -ms-transform: rotate(-5deg);
   -o-transform: rotate(-5deg);
 }
+@media (max-width: 767px) {
+  .landing::before {
+    content: "";
+    width: 75%;
+    height: 70%;
+    background-color: var(--section-color);
+    position: absolute;
+    top: -101px;
+    left: 13%;
+    z-index: -1;
+    transform: skewY(-12deg) !important;
+    -webkit-transform: rotate(-5deg);
+    -webkit-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+  }
+
+  .landing .container {
+    display: flex;
+    padding: 0 15px 0;
+    min-height: calc(90vh - 100px) !important;
+  }
+}
 
 .landing .container {
   display: flex;
@@ -318,6 +341,7 @@ header .container .nav > li > a:hover {
 }
 
 .landing .text {
+  flex: 1;
   flex-basis: 50%;
   display: flex;
   flex-direction: column;
@@ -364,7 +388,7 @@ header .container .nav > li > a:hover {
   }
 
   .landing .text {
-    margin: 10px auto;
+    margin: 172px auto;
     transform: translatey(-50%);
     -webkit-transform: translatey(-50%);
     -moz-transform: translatey(-50%);
